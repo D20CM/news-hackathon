@@ -1,13 +1,14 @@
-import React from "react";
+import { React, useState } from "react";
 import styles from "./searchbar.module.css";
 
 function SearchBar({ searchTerm, setSearchTerm }) {
+  const [userInput, setUserInput] = useState("");
   function handleChange(e) {
-    setSearchTerm(e.target.value);
+    setUserInput(e.target.value);
   }
 
   function handleSubmit() {
-    console.log(searchTerm);
+    setSearchTerm(userInput);
   }
   return (
     <div className={styles.searchArea}>

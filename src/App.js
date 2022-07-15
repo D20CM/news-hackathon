@@ -7,8 +7,17 @@ import SearchBar from "./Components/SearchBar/SearchBar";
 function App() {
   const [articles, setArticles] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [queryString, setQueryString] = useState(
+    `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&country=gb&language=en`
+  );
 
-  const url = `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&country=gb&language=en`;
+  // const queryString = `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&country=gb&language=en`;
+
+  useEffect(() => {
+    setQueryString(
+      `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&country=gb&language=en&q=${searchTerm}`
+    );
+  }, [searchTerm]);
 
   async function getArticles(queryString) {
     const response = await fetch(queryString);
@@ -19,8 +28,8 @@ function App() {
   }
 
   useEffect(() => {
-    getArticles(url);
-  }, []);
+    getArticles(queryString);
+  }, [queryString]);
 
   return (
     <div className="App">
