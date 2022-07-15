@@ -1,0 +1,16 @@
+.show {
+    position: fixed;
+    width: auto;
+    height: auto;
+    background-color: grey;
+    z-index: 5;
+    list-style: none;
+}
+
+.hide{
+  display: none;
+}
+
+.item {
+    border: 2px solid lightgray;
+}
