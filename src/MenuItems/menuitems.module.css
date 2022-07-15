@@ -1,8 +1,9 @@
 .show {
-    position: fixed;
-    width: auto;
-    height: auto;
-    background-color: grey;
+    position: absolute;
+    left: -60%;
+    width: 180%;
+    text-align: center;
+    height: 100%;
     z-index: 5;
     list-style: none;
 }
@@ -12,5 +13,8 @@
 }
 
 .item {
-    border: 2px solid lightgray;
+  margin: 3%;
+  opacity: 0.8;
+  background-color: black;
+  
 }
