@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./article.module.css";
-import placeholder from "../../assets/news-placeholder.png";
+// import placeholder from "../../../public/assets/news-placeholder.png";
 
 function Article({ article }) {
+  const placeholder =
+    "https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png";
   return (
     <div className={styles.articleCard}>
       {article.image_url !== null ? (
