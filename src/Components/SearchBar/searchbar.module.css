@@ -1,19 +1,23 @@
 .searchArea > input {
-height: 2em;
-width: 25em;
-margin: 1em;
-padding: 0 1em;
-
+  height: 2em;
+  width: 25em;
+  margin: 1em;
+  padding: 0 1em;
 }
 
-.searchArea{
-    background-color: var(--background-dark);
+.searchArea {
+  background-color: var(--background-dark);
 }
 .searchArea > button {
-height: 2em;
-width: 10em;
-margin: 1em;
-padding: 0 1em;
-background-color: var(--highlight-orange);
+  height: 2.5em;
+  width: 10em;
 
+  padding: 0 1em;
+  background-color: var(--highlight-orange);
+  cursor: pointer;
+}
+
+.searchArea > button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
