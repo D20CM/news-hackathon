@@ -1,6 +1,6 @@
-import styles from "./menu.module.css";
+import styles from "./menuitems.module.css";
 
-export default function MenuItems({ show, setShow }) {
+export default function MenuItems({ show, setShow, category, setCategory }) {
   if (show === true) {
     return (
       <ul className={styles.show}>
@@ -8,6 +8,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("business");
           }}
         >
           Business
@@ -16,6 +17,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("entertainment");
           }}
         >
           Entertainment
@@ -24,6 +26,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("environment");
           }}
         >
           Environment
@@ -32,6 +35,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("food");
           }}
         >
           Food
@@ -40,6 +44,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("health");
           }}
         >
           Health
@@ -48,6 +53,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("politics");
           }}
         >
           Politics
@@ -56,6 +62,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("science");
           }}
         >
           Science
@@ -64,6 +71,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("sports");
           }}
         >
           Sports
@@ -72,6 +80,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("technology");
           }}
         >
           Technology
@@ -80,6 +89,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("top");
           }}
         >
           Top
@@ -88,6 +98,7 @@ export default function MenuItems({ show, setShow }) {
           className={styles.item}
           onClick={() => {
             setShow(false);
+            setCategory("world");
           }}
         >
           World
