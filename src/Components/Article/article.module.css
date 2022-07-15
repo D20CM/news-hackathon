@@ -1,11 +1,26 @@
 .articleCard{
-    background-color: rgb(209, 209, 209);
+    background-color: var(--dark-blue);
     border-radius: 4px;
     margin: 2em;
     text-align: left;
     padding: 1em;
+    color: var(--main-white);
+    height: 500px;
 }
 
 .articleImage{
     max-width: 100%;
+}
+
+.content{
+   
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* white-space: nowrap;
+    max-width: 100%; */
+}
+
+.readMore{
+    color: var(--highlight-orange);
+    text-decoration: none;
 }

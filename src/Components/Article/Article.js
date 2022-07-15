@@ -12,7 +12,10 @@ function Article({ article }) {
         ></img>
       )}
       <h2>{article.title}</h2>
-      <p>{article.title}</p>
+      <p className={styles.content}>{article.content}</p>
+      <a href={article.link} className={styles.readMore}>
+        Read More
+      </a>
     </div>
   );
 }
