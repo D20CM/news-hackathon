@@ -13,7 +13,10 @@ function SearchBar({ searchTerm, setSearchTerm }) {
   }
   return (
     <div className={styles.searchArea}>
-      <input onChange={(e) => handleChange(e)}></input>
+      <input
+        onChange={(e) => handleChange(e)}
+        placeholder="Search here"
+      ></input>
       <button onClick={() => handleSubmit()}>Search</button>
     </div>
   );
