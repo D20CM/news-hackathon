@@ -5,10 +5,10 @@ import "./App.css";
 
 import SearchBar from "./Components/SearchBar/SearchBar";
 
-
 function App() {
   const [articles, setArticles] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [category, setCategory] = useState("");
   const [queryString, setQueryString] = useState(
     `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&country=gb&language=en`
   );
@@ -21,6 +21,13 @@ function App() {
     );
   }, [searchTerm]);
 
+  useEffect(() => {
+    if (category !== "") {
+      setQueryString(
+        `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&category=${category}&country=gb&language=en`
+      );
+    }
+  }, [category]);
 
   async function getArticles(queryString) {
     const response = await fetch(queryString);
@@ -34,10 +41,10 @@ function App() {
     getArticles(queryString);
   }, [queryString]);
 
-
+  console.log("category", category);
   return (
     <div className="App">
-      <Header />
+      <Header category={category} setCategory={setCategory} />
       <SearchBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
