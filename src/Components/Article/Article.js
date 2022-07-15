@@ -1,13 +1,20 @@
 import React from "react";
 import styles from "./article.module.css";
+import placeholder from "../../assets/news-placeholder.png";
 
 function Article({ article }) {
   return (
     <div className={styles.articleCard}>
-      {article.image_url !== null && (
+      {article.image_url !== null ? (
         <img
           src={article.image_url}
           alt={article.title}
+          className={styles.articleImage}
+        ></img>
+      ) : (
+        <img
+          src={placeholder}
+          alt="placeholder"
           className={styles.articleImage}
         ></img>
       )}
