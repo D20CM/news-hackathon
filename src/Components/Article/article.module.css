@@ -1,0 +1,10 @@
+.articleCard{
+    background-color: rgb(209, 209, 209);
+    border-radius: 4px;
+    margin: 2em;
+    text-align: left;
+}
+
+.articleImage{
+    max-width: 100%;
+}
