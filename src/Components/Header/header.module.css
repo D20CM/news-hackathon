@@ -2,7 +2,7 @@
     display: flex;
     width: auto;
     height: 50px;
-    background-color: darkslategray;
+    background-color: var(--dark-blue);
     text-align: center;
     z-index: 5;
 
@@ -10,6 +10,5 @@
 
 
 .title {
-    color: white;
-
+    color: var(--main-white);
 }
