@@ -1,10 +1,8 @@
-
 import ArticlesArea from "./Components/ArticlesArea/ArticlesArea";
 import Header from "./Components/Header/Header";
 import { useState, useEffect } from "react";
 import "./App.css";
 import Article from "./Components/Article/Article";
-
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -15,6 +13,7 @@ function App() {
     const response = await fetch(url);
     const data = await response.json();
     const results = data.results;
+    console.log(results);
 
     setArticles(results);
   }
@@ -25,11 +24,8 @@ function App() {
 
   return (
     <div className="App">
-
       <Header />
-      <ArticlesArea />
-      {articles && articles.map((article) => <Article article={article} />)}
-
+      <ArticlesArea articles={articles} />
     </div>
   );
 }
