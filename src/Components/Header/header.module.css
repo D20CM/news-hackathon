@@ -1,7 +1,7 @@
 .header {
     display: flex;
     width: auto;
-    height: 50px;
+    height: 100%;
     background-color: darkslategray;
     text-align: center;
 
@@ -9,6 +9,11 @@
 
 
 .title {
+    font-size: 200%;
+    margin-right: -5%;
+    margin-bottom: 1%;
+    position: relative;
+    right: -45%;
     color: white;
 
 }
