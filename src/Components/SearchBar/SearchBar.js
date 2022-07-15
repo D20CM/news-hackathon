@@ -3,6 +3,7 @@ import styles from "./searchbar.module.css";
 
 function SearchBar({ searchTerm, setSearchTerm }) {
   const [userInput, setUserInput] = useState("");
+
   function handleChange(e) {
     setUserInput(e.target.value);
   }
