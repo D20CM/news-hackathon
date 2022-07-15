@@ -1,6 +1,10 @@
+
+import ArticlesArea from "./Components/ArticlesArea/ArticlesArea";
+import Header from "./Components/Header/Header";
 import { useState, useEffect } from "react";
 import "./App.css";
 import Article from "./Components/Article/Article";
+
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -21,8 +25,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>News Hackathon</h1>
+
+      <Header />
+      <ArticlesArea />
       {articles && articles.map((article) => <Article article={article} />)}
+
     </div>
   );
 }

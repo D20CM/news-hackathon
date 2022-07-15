@@ -1,0 +1,33 @@
+@media (min-width: 500px) {
+  .gridcontainer{
+    display: grid;
+  grid-template-columns: auto auto auto auto auto;
+    border: solid 2px red;
+    gap: 10px;
+
+
+}
+
+.grid{
+    border: solid 2px blue;
+    width: 200px;
+    height: 100px;
+}
+}
+
+@media (max-width: 500px) {
+  .gridcontainer{
+    display: grid;
+  grid-template-columns: auto;
+    border: solid 2px red;
+    gap: 10px;
+    margin: 100px;
+
+}
+
+.grid{
+    border: solid 2px blue;
+    width: 200px;
+    height: 100px;
+}
+}

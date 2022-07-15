@@ -1,3 +1,4 @@
+
 import React from "react";
 
 function Article({ article }) {
@@ -10,3 +11,4 @@ function Article({ article }) {
 }
 
 export default Article;
+
