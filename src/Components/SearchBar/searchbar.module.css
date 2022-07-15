@@ -1,0 +1,15 @@
+.searchArea > input {
+height: 2em;
+width: 25em;
+margin: 1em;
+padding: 0 1em;
+
+}
+.searchArea > button {
+height: 2em;
+width: 10em;
+margin: 1em;
+padding: 0 1em;
+background-color: rgb(255, 208, 0);
+
+}
