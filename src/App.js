@@ -2,7 +2,9 @@ import ArticlesArea from "./Components/ArticlesArea/ArticlesArea";
 import Header from "./Components/Header/Header";
 import { useState, useEffect } from "react";
 import "./App.css";
+
 import SearchBar from "./Components/SearchBar/SearchBar";
+
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -19,6 +21,7 @@ function App() {
     );
   }, [searchTerm]);
 
+
   async function getArticles(queryString) {
     const response = await fetch(queryString);
     const data = await response.json();
@@ -30,6 +33,7 @@ function App() {
   useEffect(() => {
     getArticles(queryString);
   }, [queryString]);
+
 
   return (
     <div className="App">

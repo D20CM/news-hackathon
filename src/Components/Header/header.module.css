@@ -1,12 +1,14 @@
 .header {
+    display: flex;
     width: auto;
     height: 50px;
     background-color: darkslategray;
+    text-align: center;
 
 }
 
 
 .title {
     color: white;
-    text-align: center;
+
 }
