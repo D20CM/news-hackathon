@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
+import Article from "./Components/Article/Article";
 
 function App() {
+  const [articles, setArticles] = useState([]);
+
+  const url = `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&country=gb&language=en`;
+
+  async function getArticles() {
+    const response = await fetch(url);
+    const data = await response.json();
+    const results = data.results;
+
+    setArticles(results);
+  }
+
+  useEffect(() => {
+    getArticles();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>News Hackathon</h1>
+      {articles && articles.map((article) => <Article article={article} />)}
     </div>
   );
 }
