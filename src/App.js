@@ -9,6 +9,7 @@ function App() {
   const [articles, setArticles] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState("");
+  const [dark, setDark] = useState(false);
   const [queryString, setQueryString] = useState(
     `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&country=gb&language=en`
   );
@@ -44,7 +45,12 @@ function App() {
   console.log("category", category);
   return (
     <div className="App">
-      <Header category={category} setCategory={setCategory} />
+      <Header
+        dark={dark}
+        setDark={setDark}
+        category={category}
+        setCategory={setCategory}
+      />
       <SearchBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
