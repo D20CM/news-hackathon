@@ -1,38 +1,39 @@
 import styles from "./articlesArea.module.css";
+import Article from "../Article/Article";
 
 export default function ArticlesArea() {
   return (
     <div>
       <div className={styles.gridcontainer}>
         <div className={styles.grid} id={styles.grid1}>
-          A
+          <Article />
         </div>
         <div className={styles.grid} id={styles.grid2}>
-          B
+          <Article />
         </div>
         <div className={styles.grid} id={styles.grid3}>
-          C
+          <Article />
         </div>
         <div className={styles.grid} id={styles.grid4}>
-          D
+          <Article />
         </div>
         <div className={styles.grid} id={styles.grid5}>
-          E
+          <Article />
         </div>
         <div className={styles.grid} id={styles.grid6}>
-          F
+          <Article />
         </div>
         <div className={styles.grid} id={styles.grid7}>
-          G
+          <Article />
         </div>
         <div className={styles.grid} id={styles.grid8}>
-          H
+          <Article />
         </div>
         <div className={styles.grid} id={styles.grid9}>
-          I
+          <Article />
         </div>
         <div className={styles.grid} id={styles.grid10}>
-          J
+          <Article />
         </div>
       </div>
     </div>
